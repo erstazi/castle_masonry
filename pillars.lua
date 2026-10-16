@@ -177,8 +177,11 @@ castle_masonry.register_pillar = function(material)
 		output = name_prefix.."_crossbrace 10",
 		recipe = {
 			{material.craft_material,"",material.craft_material},
-			{"",material.craft_material,""},
+			{"","default:steel_ingot",""},
 			{material.craft_material,"",material.craft_material} },
+		replacements = {
+			{"default:steel_ingot", "default:steel_ingot"}
+		},
 	})
 
 	minetest.register_craft({
